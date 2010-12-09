@@ -1,0 +1,42 @@
+Read me for Brainfxxk_module
+============================
+
+Contest
+----------------------------
+About this module
+How to use
+License model
+Version
+Contact
+
+About this module
+---------------------------
+This module works on Linux Kernel.
+You can run brainfxxk in kernel space.
+If you want to know more about brainfxxk, see the following site.
+	http://en.wikipedia.org/wiki/Brainfuck
+
+How to use
+---------------------------
+First, you have to compile the module.
+	$ make -C /lib/modules/`uname -r`/build SUBDIRS=$PWD modules
+Next you install module with root permission.
+	# insmod ./brainfuck.ko
+And write source code to proc filesystem.
+	# echo '(brainfxxk source code)' > /proc/bf_source
+Then the code is executed, the output is written to /proc/bf_output
+
+License model
+--------------------------
+License model of this module is The GNU General Public License v3.0
+
+Version
+--------------------------
+Current version is 1.0.0-alpha (2010-12-9).
+There are many bug.
+Please take care.
+
+Contact
+--------------------------
+If you want to contact for developer, please send email to hiromu@yumetaro.info
+
